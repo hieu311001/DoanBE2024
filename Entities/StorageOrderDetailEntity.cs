@@ -25,5 +25,10 @@ namespace ProductOrder.Entities
         /// Số lượng đặt
         /// </summary>
         public int? Amount { get; set; }
+
+        /// <summary>
+        /// Số lượng đặt
+        /// </summary>
+        public int? CurrentAmount { get; set; }
     }
 }

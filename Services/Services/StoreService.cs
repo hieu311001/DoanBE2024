@@ -11,21 +11,23 @@ namespace ProductOrder.Services.Services
         {
         }
 
-        public dynamic GetStorageReport(bool isMonth)
+        public dynamic GetStorageReport(ReportProductParam param)
         {
             Dictionary<string, object> parameter = new Dictionary<string, object>();
 
-            parameter.Add("isMonth", isMonth);
+            parameter.Add("fromDate", param.fromDate);
+            parameter.Add("toDate", param.toDate);
 
             dynamic result = _repo.ExecuteProc("Proc_GetStorageReport", parameter);
             return result;
         }
 
-        public dynamic GetStoreReport(bool isMonth)
+        public dynamic GetStoreReport(ReportProductParam param)
         {
             Dictionary<string, object> parameter = new Dictionary<string, object>();
 
-            parameter.Add("isMonth", isMonth);
+            parameter.Add("fromDate", param.fromDate);
+            parameter.Add("toDate", param.toDate);
 
             dynamic result = _repo.ExecuteProc("Proc_GetStoreReport", parameter);
             return result;

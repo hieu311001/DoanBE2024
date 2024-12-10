@@ -27,7 +27,8 @@ namespace ProductOrder.Services.Services
             Dictionary<string, object> parameter = new Dictionary<string, object>();
 
             parameter.Add("storeID", param.storeID);
-            parameter.Add("isMonth", param.isMonth);
+            parameter.Add("fromDate", param.fromDate);
+            parameter.Add("toDate", param.toDate);
 
             dynamic result = _repo.ExecuteProc("Proc_GetProductReportByStorageOrder", parameter);
             return result;
@@ -48,7 +49,8 @@ namespace ProductOrder.Services.Services
             Dictionary<string, object> parameter = new Dictionary<string, object>();
 
             parameter.Add("storeID", param.storeID);
-            parameter.Add("isMonth", param.isMonth);
+            parameter.Add("fromDate", param.fromDate);
+            parameter.Add("toDate", param.toDate);
 
             dynamic result = _repo.ExecuteProc("Proc_GetProductReportByStoreID", parameter);
             return result;

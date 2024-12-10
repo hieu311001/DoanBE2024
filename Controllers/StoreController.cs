@@ -16,20 +16,20 @@ namespace ProductOrder.Controllers
         /// <summary>
         /// Lấy toàn bộ sản phẩm
         /// </summary>
-        [HttpGet("get-report/{isMonth}")]
-        public IActionResult GetStoreReport(Boolean isMonth)
+        [HttpPost("get-report")]
+        public IActionResult GetStoreReport([FromBody] ReportProductParam param)
         {
-            dynamic result = _service.GetStoreReport(isMonth);
+            dynamic result = _service.GetStoreReport(param);
             return Ok(result);
         }
 
         /// <summary>
         /// Lấy toàn bộ sản phẩm
         /// </summary>
-        [HttpGet("get-report-storage/{isMonth}")]
-        public IActionResult GetStorageReport(Boolean isMonth)
+        [HttpPost("get-report-storage")]
+        public IActionResult GetStorageReport([FromBody] ReportProductParam param)
         {
-            dynamic result = _service.GetStorageReport(isMonth);
+            dynamic result = _service.GetStorageReport(param);
             return Ok(result);
         }
     }

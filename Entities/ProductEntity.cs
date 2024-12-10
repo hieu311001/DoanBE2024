@@ -31,6 +31,11 @@ namespace ProductOrder.Entities
         public decimal? OriginalPrice { get; set; }
 
         /// <summary>
+        /// Cờ đánh dấu sản phẩm bị xóa
+        /// </summary>
+        public int? IsDelete { get; set; }
+
+        /// <summary>
         /// Thương hiệu
         /// </summary>
         public string Brand { get; set; }

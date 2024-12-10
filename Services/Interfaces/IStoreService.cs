@@ -1,10 +1,12 @@
-﻿using ProductOrder.Entities;
+﻿using Microsoft.AspNetCore.Mvc;
+using ProductOrder.Entities;
+using ProductOrder.Parameters;
 
 namespace ProductOrder.Services.Interfaces
 {
     public interface IStoreService : IBaseService<StoreEntity>
     {
-        dynamic GetStorageReport(bool isMonth);
-        dynamic GetStoreReport(bool isMonth);
+        dynamic GetStorageReport(ReportProductParam param);
+        dynamic GetStoreReport(ReportProductParam param);
     }
 }
